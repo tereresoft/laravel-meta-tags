@@ -35,6 +35,16 @@ return [
          'canonical' => ['title' => 'Canonical link'],
          'robots' => ['title' => 'Robots'],
          'fb_app_id' => ['title' => 'Facebook app ID'],
+
+         //twitter}
+         'twitter_card' => ['title' => 'twitter_card'],
+         'twitter_title' => ['title' => 'twitter_card'],
+         'twitter_site' => ['title' => 'twitter_card'],
+         'twitter_creator' => ['title' => 'twitter_card'],}
+         'twitter_description' => ['title' => 'twitter_card'],
+         'twitter_image' => ['title' => 'twitter_card'],
+
+
     ],
 
     'default' => [
