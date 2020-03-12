@@ -24,6 +24,17 @@
                 @else
                     <meta property="{{ \Illuminate\Support\Str::replaceFirst('og_', 'og:', $key)}}" content="{{ $tags[$key] }}"/>
                 @endif
+
+            @elseif (preg_match('/^twitter_\w+/', $key))
+                @if($key === 'twitter_card')
+                    <meta property="twitter:card" content="{{ url($tags[$key] ?: $path) }}"/>
+                @elseif($key === 'twitter_title')
+                     <meta name="twitter:title" content="{{ $tags[$key] }}"/>
+                @elseif($key === 'twitter_image' && !empty($tags[$key]))
+                    <meta property="twitter:image" content="{{ url($tags[$key]) }}"/>
+                @elseif($key === 'twitter_descríption' && !empty($tags[$key]))
+                    <meta property="twitter:descríption" content="{{ url($tags[$key]) }}"/>
+                @endif  
             @endif
         @endif
     @endforeach
